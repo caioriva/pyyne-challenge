@@ -1,6 +1,6 @@
 package com.pyyne.bankmanager.model.bank.account;
 
-import com.pyyne.bankmanager.model.bank.Bank;
+import com.pyyne.bankmanager.model.bank.BankInstitution;
 
 public class Account {
 
@@ -8,12 +8,12 @@ public class Account {
 
     private long externalId;
 
-    private Bank associatedBank;
+    private BankInstitution associatedBankInstitution;
 
-    public Account(long internalId, long externalId, Bank associatedBank) {
+    public Account(long internalId, long externalId, BankInstitution associatedBankInstitution) {
         this.internalId = internalId;
         this.externalId = externalId;
-        this.associatedBank = associatedBank;
+        this.associatedBankInstitution = associatedBankInstitution;
     }
 
     public long getInternalId() {
@@ -24,7 +24,7 @@ public class Account {
         return externalId;
     }
 
-    public Bank getAssociatedBank() {
-        return associatedBank;
+    public BankInstitution getAssociatedBank() {
+        return associatedBankInstitution;
     }
 }

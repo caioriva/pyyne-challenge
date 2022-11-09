@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.pyyne.bankmanager.model.bank.Bank.BANK_1;
-import static com.pyyne.bankmanager.model.bank.Bank.BANK_2;
+import static com.pyyne.bankmanager.model.bank.BankInstitution.BANK_1;
+import static com.pyyne.bankmanager.model.bank.BankInstitution.BANK_2;
 
 /**
  * Returns dummy data for the sake of testing. Ideally this service would call a repository class and retrieve the
