@@ -22,9 +22,11 @@ public class BalanceController {
         this.balanceService = balanceService;
     }
 
+    // BankInstitutionNotSupported should be handled correctly with Spring ExceptionHandler in a real life situation
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<AccountBalance> getBalances(@PathVariable long accountId) throws BankInstitutionNotSupported {
+
         return balanceService.getAvailableBalances(accountId);
     }
 }

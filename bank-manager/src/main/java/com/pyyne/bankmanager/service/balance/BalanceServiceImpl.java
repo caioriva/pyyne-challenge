@@ -1,7 +1,7 @@
 package com.pyyne.bankmanager.service.balance;
 
 import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
-import com.pyyne.bankmanager.factory.BalanceCheckerFactory;
+import com.pyyne.bankmanager.factory.balance.BalanceCheckerFactory;
 import com.pyyne.bankmanager.model.bank.account.Account;
 import com.pyyne.bankmanager.model.bank.account.balance.AccountBalance;
 import com.pyyne.bankmanager.service.account.AccountService;

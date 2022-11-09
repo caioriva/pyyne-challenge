@@ -1,10 +1,10 @@
-package com.pyyne.bankmanager.factory;
+package com.pyyne.bankmanager.factory.balance;
 
 import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
 import com.pyyne.bankmanager.model.bank.BankInstitution;
-import com.pyyne.bankmanager.strategy.BalanceCheckerStrategy;
-import com.pyyne.bankmanager.strategy.Bank1BalanceChecker;
-import com.pyyne.bankmanager.strategy.Bank2BalanceChecker;
+import com.pyyne.bankmanager.strategy.balance.BalanceCheckerStrategy;
+import com.pyyne.bankmanager.strategy.balance.Bank1BalanceChecker;
+import com.pyyne.bankmanager.strategy.balance.Bank2BalanceChecker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

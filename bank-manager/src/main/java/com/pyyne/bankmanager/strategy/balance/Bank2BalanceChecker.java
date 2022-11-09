@@ -1,4 +1,4 @@
-package com.pyyne.bankmanager.strategy;
+package com.pyyne.bankmanager.strategy.balance;
 
 import com.pyyne.bankmanager.infrastructure.bank2.integration.Bank2AccountBalance;
 import com.pyyne.bankmanager.infrastructure.bank2.integration.Bank2AccountSource;

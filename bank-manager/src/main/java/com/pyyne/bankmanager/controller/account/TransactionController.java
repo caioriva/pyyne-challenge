@@ -1,5 +1,6 @@
 package com.pyyne.bankmanager.controller.account;
 
+import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
 import com.pyyne.bankmanager.model.bank.account.transaction.AccountTransaction;
 import com.pyyne.bankmanager.service.transaction.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,12 +24,13 @@ public class TransactionController {
         this.transactionService = transactionService;
     }
 
+    // BankInstitutionNotSupported should be handled correctly with Spring ExceptionHandler in a real life situation
     @GetMapping()
     @ResponseStatus(HttpStatus.OK)
     public List<AccountTransaction> getTransactions(
             @PathVariable long accountId, @RequestParam @DateTimeFormat(pattern= "yyyy-MM-dd") Date fromDate,
-            @RequestParam @DateTimeFormat(pattern= "yyyy-MM-dd") Date toDate) {
-        System.out.println(String.format("accountId:%s, from:%s, to:%s", accountId, fromDate, toDate));
-        return null;
+            @RequestParam @DateTimeFormat(pattern= "yyyy-MM-dd") Date toDate) throws BankInstitutionNotSupported {
+
+        return transactionService.getTransactions(accountId, fromDate, toDate);
     }
 }
