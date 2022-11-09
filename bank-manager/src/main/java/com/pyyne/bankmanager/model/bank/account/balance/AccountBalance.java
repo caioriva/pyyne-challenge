@@ -1,4 +1,4 @@
-package com.pyyne.bankmanager.model.account.balance;
+package com.pyyne.bankmanager.model.bank.account.balance;
 
 public class AccountBalance {
 

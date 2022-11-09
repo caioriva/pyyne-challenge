@@ -1,4 +1,4 @@
-package com.pyyne.bankmanager.model.account.transaction;
+package com.pyyne.bankmanager.model.bank.account.transaction;
 
 public class AccountTransaction {
 
