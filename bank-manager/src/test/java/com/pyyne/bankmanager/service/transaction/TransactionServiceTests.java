@@ -69,14 +69,14 @@ public class TransactionServiceTests {
         when(transactionCheckerFactory.getTransactionChecker(BANK_2)).thenReturn(bank2TransactionCheckerStrategy);
 
         // Act
-        List<AccountTransaction> actualBalances = transactionService
+        List<AccountTransaction> actualTransactions = transactionService
                 .getTransactions(expectedInternalAccountId, expectedFromDate, expectedToDate);
 
         // Assert
         verify(transactionCheckerFactory, times(2))
                 .getTransactionChecker(any(BankInstitution.class));
         verify(accountService, times(1)).getAssociatedBankAccounts(expectedInternalAccountId);
-        assertIterableEquals(expectedTransactions, actualBalances);
+        assertIterableEquals(expectedTransactions, actualTransactions);
     }
 
     @Test(expected = BankInstitutionNotSupportedException.class)
