@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "d8936839-c388-4464-a83a-034d56116ba4",
+		"name": "Pyyne Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Balances",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts/123/balances",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"123",
+						"balances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/accounts/123/transactions?fromDate=2021-01-01&toDate=2022-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"123",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "toDate",
+							"value": "2022-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
