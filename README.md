@@ -18,3 +18,9 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 ```shell
 mvn spring-boot:run
 ```
+
+## Testing the endpoints locally
+
+There are also several ways to hit the endpoints locally but it's recommended to use [Postman](https://www.postman.com/downloads/) because this repository already includes the exported Postman collection [Pyyne Challenge.postman_collection.json](./Pyyne Challenge.postman_collection.json).
+
+OBS: it's important to use it because values from some path variables and request parameters require a specific formatting in some endpoints.
