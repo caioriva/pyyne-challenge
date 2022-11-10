@@ -1,7 +1,7 @@
 package com.pyyne.bankmanager.service.balance;
 
 import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
-import com.pyyne.bankmanager.model.bank.account.balance.AccountBalance;
+import com.pyyne.bankmanager.model.balance.AccountBalance;
 
 import java.util.List;
 

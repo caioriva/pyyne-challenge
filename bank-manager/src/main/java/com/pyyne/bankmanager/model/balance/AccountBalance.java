@@ -1,4 +1,6 @@
-package com.pyyne.bankmanager.model.bank.account.balance;
+package com.pyyne.bankmanager.model.balance;
+
+import com.pyyne.bankmanager.model.AccountCurrency;
 
 public class AccountBalance {
 

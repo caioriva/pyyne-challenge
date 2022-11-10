@@ -1,10 +1,10 @@
-package com.pyyne.bankmanager.factory.transaction;
+package com.pyyne.bankmanager.infrastructure.factory.transaction;
 
 import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
-import com.pyyne.bankmanager.model.bank.BankInstitution;
-import com.pyyne.bankmanager.strategy.transaction.Bank1TransactionChecker;
-import com.pyyne.bankmanager.strategy.transaction.Bank2TransactionChecker;
-import com.pyyne.bankmanager.strategy.transaction.TransactionCheckerStrategy;
+import com.pyyne.bankmanager.infrastructure.strategy.transaction.Bank1TransactionChecker;
+import com.pyyne.bankmanager.infrastructure.strategy.transaction.Bank2TransactionChecker;
+import com.pyyne.bankmanager.infrastructure.strategy.transaction.TransactionCheckerStrategy;
+import com.pyyne.bankmanager.model.BankInstitution;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

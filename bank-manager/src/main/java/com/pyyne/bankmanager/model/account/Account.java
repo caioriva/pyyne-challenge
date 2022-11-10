@@ -1,6 +1,6 @@
-package com.pyyne.bankmanager.model.bank.account;
+package com.pyyne.bankmanager.model.account;
 
-import com.pyyne.bankmanager.model.bank.BankInstitution;
+import com.pyyne.bankmanager.model.BankInstitution;
 
 public class Account {
 

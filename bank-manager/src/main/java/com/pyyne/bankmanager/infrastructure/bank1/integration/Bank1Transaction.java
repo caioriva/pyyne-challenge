@@ -1,7 +1,5 @@
 package com.pyyne.bankmanager.infrastructure.bank1.integration;
 
-import java.util.Date;
-
 /**
  * Created by Par Renyard on 5/12/21.
  */

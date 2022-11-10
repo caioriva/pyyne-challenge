@@ -1,7 +1,7 @@
-package com.pyyne.bankmanager.controller.account;
+package com.pyyne.bankmanager.controller;
 
 import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
-import com.pyyne.bankmanager.model.bank.account.transaction.AccountTransaction;
+import com.pyyne.bankmanager.model.transaction.AccountTransaction;
 import com.pyyne.bankmanager.service.transaction.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;

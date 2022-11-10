@@ -1,6 +1,6 @@
-package com.pyyne.bankmanager.strategy.transaction;
+package com.pyyne.bankmanager.infrastructure.strategy.transaction;
 
-import com.pyyne.bankmanager.model.bank.account.transaction.AccountTransaction;
+import com.pyyne.bankmanager.model.transaction.AccountTransaction;
 
 import java.util.Date;
 import java.util.List;

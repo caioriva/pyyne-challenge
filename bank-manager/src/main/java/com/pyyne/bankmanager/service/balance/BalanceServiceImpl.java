@@ -1,9 +1,9 @@
 package com.pyyne.bankmanager.service.balance;
 
 import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
-import com.pyyne.bankmanager.factory.balance.BalanceCheckerFactory;
-import com.pyyne.bankmanager.model.bank.account.Account;
-import com.pyyne.bankmanager.model.bank.account.balance.AccountBalance;
+import com.pyyne.bankmanager.infrastructure.factory.balance.BalanceCheckerFactory;
+import com.pyyne.bankmanager.model.account.Account;
+import com.pyyne.bankmanager.model.balance.AccountBalance;
 import com.pyyne.bankmanager.service.account.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

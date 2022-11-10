@@ -1,9 +1,9 @@
-package com.pyyne.bankmanager.strategy.transaction;
+package com.pyyne.bankmanager.infrastructure.strategy.transaction;
 
 import com.pyyne.bankmanager.infrastructure.bank2.integration.Bank2AccountSource;
 import com.pyyne.bankmanager.infrastructure.bank2.integration.Bank2AccountTransaction.TRANSACTION_TYPES;
-import com.pyyne.bankmanager.model.bank.account.transaction.AccountTransaction;
-import com.pyyne.bankmanager.model.bank.account.transaction.AccountTransactionType;
+import com.pyyne.bankmanager.model.transaction.AccountTransaction;
+import com.pyyne.bankmanager.model.transaction.AccountTransactionType;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;

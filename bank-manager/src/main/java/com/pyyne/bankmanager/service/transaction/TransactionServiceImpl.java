@@ -1,9 +1,9 @@
 package com.pyyne.bankmanager.service.transaction;
 
 import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
-import com.pyyne.bankmanager.factory.transaction.TransactionCheckerFactory;
-import com.pyyne.bankmanager.model.bank.account.Account;
-import com.pyyne.bankmanager.model.bank.account.transaction.AccountTransaction;
+import com.pyyne.bankmanager.infrastructure.factory.transaction.TransactionCheckerFactory;
+import com.pyyne.bankmanager.model.account.Account;
+import com.pyyne.bankmanager.model.transaction.AccountTransaction;
 import com.pyyne.bankmanager.service.account.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.pyyne.bankmanager.model.bank.account.transaction;
+package com.pyyne.bankmanager.model.transaction;
 
 public enum AccountTransactionType {
     DEBIT,

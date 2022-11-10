@@ -1,8 +1,8 @@
-package com.pyyne.bankmanager.factory.balance;
+package com.pyyne.bankmanager.infrastructure.factory.balance;
 
 import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
-import com.pyyne.bankmanager.model.bank.BankInstitution;
-import com.pyyne.bankmanager.strategy.balance.BalanceCheckerStrategy;
+import com.pyyne.bankmanager.infrastructure.strategy.balance.BalanceCheckerStrategy;
+import com.pyyne.bankmanager.model.BankInstitution;
 
 public interface BalanceCheckerFactory {
 
