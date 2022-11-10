@@ -1,6 +1,6 @@
 package com.pyyne.bankmanager.controller;
 
-import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
+import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupportedException;
 import com.pyyne.bankmanager.model.AccountCurrency;
 import com.pyyne.bankmanager.model.balance.AccountBalance;
 import com.pyyne.bankmanager.service.balance.BalanceService;
@@ -10,7 +10,7 @@ import org.junit.Test;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.mockito.Mockito.*;
 
 public class BalanceControllerTests {
@@ -25,7 +25,7 @@ public class BalanceControllerTests {
     }
 
     @Test
-    public void getBalances_inTheNormalWorkflow_shouldReturnCorrectBalanceList() throws BankInstitutionNotSupported {
+    public void getBalances_inTheNormalWorkflow_shouldReturnCorrectBalanceList() throws BankInstitutionNotSupportedException {
         // Arrange
         long expectedAccountId = 123;
         List<AccountBalance> expectedBalances = Collections.singletonList(
@@ -38,6 +38,6 @@ public class BalanceControllerTests {
 
         // Assert
         verify(balanceService, times(1)).getAvailableBalances(expectedAccountId);
-        assertEquals(expectedBalances, actualBalances);
+        assertIterableEquals(expectedBalances, actualBalances);
     }
 }

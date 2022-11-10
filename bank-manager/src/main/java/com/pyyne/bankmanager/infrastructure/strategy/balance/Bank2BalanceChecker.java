@@ -2,8 +2,8 @@ package com.pyyne.bankmanager.infrastructure.strategy.balance;
 
 import com.pyyne.bankmanager.infrastructure.bank2.integration.Bank2AccountBalance;
 import com.pyyne.bankmanager.infrastructure.bank2.integration.Bank2AccountSource;
-import com.pyyne.bankmanager.model.balance.AccountBalance;
 import com.pyyne.bankmanager.model.AccountCurrency;
+import com.pyyne.bankmanager.model.balance.AccountBalance;
 import org.springframework.stereotype.Component;
 
 @Component

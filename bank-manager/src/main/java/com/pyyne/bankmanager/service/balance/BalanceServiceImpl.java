@@ -1,6 +1,6 @@
 package com.pyyne.bankmanager.service.balance;
 
-import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
+import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupportedException;
 import com.pyyne.bankmanager.infrastructure.factory.balance.BalanceCheckerFactory;
 import com.pyyne.bankmanager.model.account.Account;
 import com.pyyne.bankmanager.model.balance.AccountBalance;
@@ -24,7 +24,7 @@ public class BalanceServiceImpl implements BalanceService {
     }
 
     @Override
-    public List<AccountBalance> getAvailableBalances(long internalAccountId) throws BankInstitutionNotSupported {
+    public List<AccountBalance> getAvailableBalances(long internalAccountId) throws BankInstitutionNotSupportedException {
         List<Account> accounts = accountService.getAssociatedBankAccounts(internalAccountId);
         List<AccountBalance> balances = new ArrayList<>();
 

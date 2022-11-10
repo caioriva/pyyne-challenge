@@ -1,6 +1,6 @@
 package com.pyyne.bankmanager.service.transaction;
 
-import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
+import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupportedException;
 import com.pyyne.bankmanager.infrastructure.factory.transaction.TransactionCheckerFactory;
 import com.pyyne.bankmanager.model.account.Account;
 import com.pyyne.bankmanager.model.transaction.AccountTransaction;
@@ -28,7 +28,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public List<AccountTransaction> getTransactions(long internalAccountId, Date fromDate, Date toDate)
-            throws BankInstitutionNotSupported {
+            throws BankInstitutionNotSupportedException {
         List<Account> accounts = accountService.getAssociatedBankAccounts(internalAccountId);
         List<AccountTransaction> transactions = new ArrayList<>();
 

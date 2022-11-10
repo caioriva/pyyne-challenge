@@ -1,6 +1,6 @@
 package com.pyyne.bankmanager.controller;
 
-import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
+import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupportedException;
 import com.pyyne.bankmanager.model.transaction.AccountTransaction;
 import com.pyyne.bankmanager.service.transaction.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class TransactionController {
     @ResponseStatus(HttpStatus.OK)
     public List<AccountTransaction> getTransactions(
             @PathVariable long accountId, @RequestParam @DateTimeFormat(pattern= "yyyy-MM-dd") Date fromDate,
-            @RequestParam @DateTimeFormat(pattern= "yyyy-MM-dd") Date toDate) throws BankInstitutionNotSupported {
+            @RequestParam @DateTimeFormat(pattern= "yyyy-MM-dd") Date toDate) throws BankInstitutionNotSupportedException {
 
         return transactionService.getTransactions(accountId, fromDate, toDate);
     }

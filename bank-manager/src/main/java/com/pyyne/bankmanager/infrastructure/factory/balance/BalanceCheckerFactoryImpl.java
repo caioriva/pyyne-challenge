@@ -1,6 +1,6 @@
 package com.pyyne.bankmanager.infrastructure.factory.balance;
 
-import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
+import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupportedException;
 import com.pyyne.bankmanager.infrastructure.strategy.balance.BalanceCheckerStrategy;
 import com.pyyne.bankmanager.infrastructure.strategy.balance.Bank1BalanceChecker;
 import com.pyyne.bankmanager.infrastructure.strategy.balance.Bank2BalanceChecker;
@@ -23,7 +23,7 @@ public class BalanceCheckerFactoryImpl implements BalanceCheckerFactory {
 
     @Override
     public BalanceCheckerStrategy getBalanceChecker(BankInstitution bankInstitution)
-            throws BankInstitutionNotSupported {
+            throws BankInstitutionNotSupportedException {
         switch (bankInstitution) {
             case BANK_1:
                 return bank1BalanceChecker;
@@ -31,6 +31,6 @@ public class BalanceCheckerFactoryImpl implements BalanceCheckerFactory {
                 return bank2BalanceChecker;
         }
 
-        throw new BankInstitutionNotSupported(bankInstitution + " is not supported.");
+        throw new BankInstitutionNotSupportedException(bankInstitution + " is not supported.");
     }
 }

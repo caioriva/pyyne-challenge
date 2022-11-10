@@ -1,6 +1,6 @@
 package com.pyyne.bankmanager.controller;
 
-import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
+import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupportedException;
 import com.pyyne.bankmanager.model.balance.AccountBalance;
 import com.pyyne.bankmanager.service.balance.BalanceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class BalanceController {
     // BankInstitutionNotSupported should be handled correctly with Spring ExceptionHandler in a real life situation
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<AccountBalance> getBalances(@PathVariable long accountId) throws BankInstitutionNotSupported {
+    public List<AccountBalance> getBalances(@PathVariable long accountId) throws BankInstitutionNotSupportedException {
 
         return balanceService.getAvailableBalances(accountId);
     }

@@ -1,6 +1,6 @@
 package com.pyyne.bankmanager.controller;
 
-import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
+import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupportedException;
 import com.pyyne.bankmanager.model.transaction.AccountTransaction;
 import com.pyyne.bankmanager.model.transaction.AccountTransactionType;
 import com.pyyne.bankmanager.service.transaction.TransactionService;
@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.mockito.Mockito.*;
 
 public class TransactionControllerTests {
@@ -29,7 +29,7 @@ public class TransactionControllerTests {
 
     @Test
     public void getTransactions_inTheNormalWorkflow_shouldReturnCorrectTransactionList()
-            throws BankInstitutionNotSupported, ParseException {
+            throws BankInstitutionNotSupportedException, ParseException {
         // Arrange
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         long expectedAccountId = 123;
@@ -48,6 +48,6 @@ public class TransactionControllerTests {
         // Assert
         verify(transactionService, times(1))
                 .getTransactions(expectedAccountId, expectedFromDate, expectedToDate);
-        assertEquals(expectedTransactions, actualTransactions);
+        assertIterableEquals(expectedTransactions, actualTransactions);
     }
 }

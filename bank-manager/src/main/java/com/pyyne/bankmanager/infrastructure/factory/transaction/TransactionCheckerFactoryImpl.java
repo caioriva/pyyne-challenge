@@ -1,6 +1,6 @@
 package com.pyyne.bankmanager.infrastructure.factory.transaction;
 
-import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupported;
+import com.pyyne.bankmanager.exceptions.BankInstitutionNotSupportedException;
 import com.pyyne.bankmanager.infrastructure.strategy.transaction.Bank1TransactionChecker;
 import com.pyyne.bankmanager.infrastructure.strategy.transaction.Bank2TransactionChecker;
 import com.pyyne.bankmanager.infrastructure.strategy.transaction.TransactionCheckerStrategy;
@@ -24,7 +24,7 @@ public class TransactionCheckerFactoryImpl implements TransactionCheckerFactory 
 
     @Override
     public TransactionCheckerStrategy getTransactionChecker(BankInstitution bankInstitution)
-            throws BankInstitutionNotSupported {
+            throws BankInstitutionNotSupportedException {
         switch (bankInstitution) {
             case BANK_1:
                 return bank1TransactionChecker;
@@ -32,6 +32,6 @@ public class TransactionCheckerFactoryImpl implements TransactionCheckerFactory 
                 return bank2TransactionChecker;
         }
 
-        throw new BankInstitutionNotSupported(bankInstitution + " is not supported.");
+        throw new BankInstitutionNotSupportedException(bankInstitution + " is not supported.");
     }
 }
